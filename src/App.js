@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Container } from "react-bootstrap";
+import NavBar from "./componant/navBar";
+import Header from "./componant/Header";
+import Catogory from "./componant/catogory";
+import Cards from "./componant/Cards";
+import { items } from "./data";
+import { useState } from "react";
 function App() {
+  const [meals, setMeals] = useState(items);
+
+  const uniqueCategories = ['All',...new Set(meals.map((item) => item.catogory))];
+
+  const filterByCatogory = (cat) => {
+    if (cat === "All") {
+      setMeals(items);
+    } else {
+      setMeals(meals.filter((item) => item.catogory === cat));
+    }
+  };
+  const filterBySearch = (word) => {
+    if (word !=="") {
+      setMeals(meals.filter((item) => item.title === word));
+    }
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar filterBySearch={filterBySearch}/>
+      <Container>
+        <Header />
+        <Catogory uniqueCategories={uniqueCategories}filterByCatogory={filterByCatogory} />
+        <Cards meals={meals} />
+      </Container>
     </div>
   );
 }

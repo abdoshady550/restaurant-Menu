@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+body { padding: 0; margin: 0; height: 100%;    font-family: 'Cairo', sans-serif; }
+.color-body{
+    background-color: #dedede;
+   
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+}
+.logo{
+    color: rgb(186, 78, 24);
+    font-weight: bold;
+
+}
+.title{
+    font-family: 'Cairo', sans-serif;
+    font-size: 30px;
+    color: #224f61;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 64px;
+}
+.under-line{
+    height: 1px;
+    width: 200px;
+    border-radius: 10px;
+    border: 2px solid #b45b35;
+}
+.scroll{
+    max-width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.regtangel{
+    background-color: rgb(255, 255, 255);
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: 1px 4px 4px 1px #4d4d4d;
+}
+.font-sp{
+   
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+.font{
+    
+    font-family: 'cursive', cursive;
+    font-size: 30px;
+}
+.btn-style{
+    
+   width: 100px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: 1px solid rgb(204, 24, 24);
+    border-radius: 9px;
+    font-family: 'cursive', cursive;
+    
+  
+}
+.btn-style:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(186, 78, 24);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 11px; 
+}
+.img-style {
+    width: 200px !important;
+    height: 200px !important;
+
+    border-radius: 5px !important;
+}
+.price-style{
+    color: #b45b35;
+    font-weight: bold;
+    
+}
+.avatar-style{
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+}
+.font-arab{
+    font-family: 'Cairo', sans-serif; 
 }
